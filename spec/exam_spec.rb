@@ -352,7 +352,7 @@ describe Interfaz do
 		end
 		
 		it "Se muestra el menu correctamente" do
-			expect(@interfaz.showmenu).to eq (["Opcion 1. Cargar examen.\n\nOpcion 2. Resolver examen\n\nOpcion 3. Ver dificultad de examen\n\nOpcion 4. Salir"])
+			expect(@interfaz.showmenu).to eq (["Opcion 1. Cargar examen.\nOpcion 2. Resolver examen\nOpcion 3. Ver dificultad de examen\nOpcion 4. Invertir examen cargado.\nOpcion 5. Salir."])
 		end
 		
 		it "Se comprueba que la opcion elegida por el usuario se almacena correctamente" do

@@ -11,7 +11,7 @@ class Interfaz
 	end
 	
 	def showmenu()
-		menu = ["Opcion 1. Cargar examen.\n\nOpcion 2. Resolver examen\n\nOpcion 3. Ver dificultad de examen\n\nOpcion 4. Salir"]
+		menu = ["Opcion 1. Cargar examen.\nOpcion 2. Resolver examen\nOpcion 3. Ver dificultad de examen\nOpcion 4. Invertir examen cargado.\nOpcion 5. Salir."]
 	end
 	
 	def opcion1
@@ -91,6 +91,10 @@ class Interfaz
 		end	
 	end
 
+	def invertir(funcion)
+		funcion.call
+	end
+
 	def menu
 		puts showmenu
 		puts "\n\n"
@@ -115,12 +119,12 @@ class Interfaz
 				puts "\n"
 				menu
 			when 4
+				invertir(@examanes[@examen_seleccionado].invertir)
+				puts "Se ha invertido el orden de las preguntas del examen: #{@examanes[@examen_seleccionado].id}\n\n"
+				menu
+			when 5
 				return
 		end
-	end
-
-	def invertir(funcion)
-		funcion.call
 	end
 
 end
